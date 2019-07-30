@@ -19,5 +19,5 @@ assets:
 style.less
 ```less
 @import "../node_modules/ng-zorro-antd/ng-zorro-antd.less";
-@import "../projects/toolkitx-ui/styles/toolkitx-ui.less";
+@import "../node_modules/@toolkitx/ui/styles/toolkitx-ui.less";
 ```
