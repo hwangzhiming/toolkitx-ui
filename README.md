@@ -1,3 +1,3 @@
 # @toolkitx/ui
 
-Shared component for Toolkitx.net
+Shared components for Toolkitx.net
