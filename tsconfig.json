@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "toolkitx-ui": [
+        "dist/toolkitx-ui"
+      ],
+      "toolkitx-ui/*": [
+        "dist/toolkitx-ui/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

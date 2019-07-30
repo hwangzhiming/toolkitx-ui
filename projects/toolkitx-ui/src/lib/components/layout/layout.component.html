@@ -1,0 +1,16 @@
+<section id="header">
+    <div class="product-name" style="-webkit-app-region: drag; -webkit-user-select: none;">
+        <img class="logo" src="/assets/toolkitx/branding/x-blue.svg" alt="">
+        <img *ngIf="icon && !title" class="name" [src]="'/assets/logos/' + icon" alt="">
+        <span class="name-text">{{title}}</span>
+    </div>
+    <div class="extra">
+        <ng-content select="tx-layout-header-extra"></ng-content>
+    </div>
+</section>
+<div id="content">
+    <ng-content select="tx-layout-content"></ng-content>
+</div>
+<div id="footer">
+    <ng-content select="tx-layout-footer"></ng-content>
+</div>

@@ -1,20 +1,104 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<tx-layout title="JWT">
+    <tx-layout-header-extra>
+        <button nz-button nzType="default" nzShape="circle" nzGhost style="border: none; box-shadow: none;"><i nz-icon
+                                                                                                               type="user"></i>
+        </button>
+        <button nz-button nzType="default" nzShape="circle" nzGhost style="border: none; box-shadow: none;"><i nz-icon
+                                                                                                               type="more"></i>
+        </button>
+    </tx-layout-header-extra>
+    <tx-layout-content>
+        <nz-tabset>
+            <nz-tab nzTitle="Tab 1">
+                <nz-radio-group [(ngModel)]="size">
+                    <label nz-radio-button nzValue="large">Large</label>
+                    <label nz-radio-button nzValue="default">Default</label>
+                    <label nz-radio-button nzValue="small">Small</label>
+                </nz-radio-group>
+                <br/>
+                <br/>
+                <button nz-button [nzSize]="size" nzType="primary">Primary</button>
+                <button nz-button [nzSize]="size" nzType="default">Default</button>
+                <button nz-button [nzSize]="size" nzType="dashed">Dashed</button>
+                <button nz-button [nzSize]="size" nzType="danger">Danger</button>
+                <button nz-button [nzSize]="size" nzType="link">Link</button>
+                <br/>
+                <button nz-button nzType="primary" [nzSize]="size" nzShape="circle"><i nz-icon nzType="download"></i>
+                </button>
+                <button nz-button nzType="primary" [nzSize]="size" nzShape="round">
+                    <i nz-icon nzType="download"></i>Download
+                </button>
+                <button nz-button nzType="primary" [nzSize]="size"><i nz-icon nzType="download"></i>Download</button>
+                <br/>
+                <nz-button-group [nzSize]="size">
+                    <button nz-button nzType="primary"><i nz-icon nzType="left"></i>Backward</button>
+                    <button nz-button nzType="primary">Forward<i nz-icon nzType="right"></i></button>
+                </nz-button-group>
+            </nz-tab>
+            <nz-tab nzTitle="Tab 2">
+                <nz-alert
+                    nzType="success"
+                    nzMessage="Success Text"
+                    nzDescription="Success Description Success Description Success Description"
+                >
+                </nz-alert>
+                <p></p>
+                <nz-alert
+                    nzType="info"
+                    nzMessage="Info Text"
+                    nzDescription="Info Description Info Description Info Description Info Description"
+                >
+                </nz-alert>
+                <p></p>
+                <nz-alert
+                    nzType="warning"
+                    nzMessage="Warning Text"
+                    nzDescription="Warning Description Warning Description Warning Description Warning Description"
+                >
+                </nz-alert>
+                <p></p>
+                <nz-alert
+                    nzType="error"
+                    nzMessage="Error Text"
+                    nzDescription="Error Description Error Description Error Description Error Description"
+                >
+                </nz-alert>
+            </nz-tab>
+            <nz-tab nzTitle="Tab 3">
+                <nz-descriptions nzTitle="User Info" nzBordered>
+                    <nz-descriptions-item nzTitle="Product">Cloud Database</nz-descriptions-item>
+                    <nz-descriptions-item nzTitle="Billing Mode">Prepaid</nz-descriptions-item>
+                    <nz-descriptions-item nzTitle="Automatic Renewal">YES</nz-descriptions-item>
+                    <nz-descriptions-item nzTitle="Order Time">
+                        2018-04-24 18:00:00
+                    </nz-descriptions-item>
+                    <nz-descriptions-item nzTitle="Usage Time" [nzSpan]="2">
+                        2018-04-24 18:00:00 To 2019-04-24 18:00:00
+                    </nz-descriptions-item>
+                    <nz-descriptions-item nzTitle="Status" [nzSpan]="3">
+                        <nz-badge nzStatus="processing" nzText="Running"></nz-badge>
+                    </nz-descriptions-item>
+                    <nz-descriptions-item nzTitle="Negotiated Amount">$80.00</nz-descriptions-item>
+                    <nz-descriptions-item nzTitle="Discount">$20.00</nz-descriptions-item>
+                    <nz-descriptions-item nzTitle="Official Receipts">$60.00</nz-descriptions-item>
+                    <nz-descriptions-item nzTitle="Config Info">
+                        Data disk type: MongoDB
+                        <br/>
+                        Database version: 3.4
+                        <br/>
+                        Package: dds.mongo.mid
+                        <br/>
+                        Storage space: 10 GB
+                        <br/>
+                        Replication_factor:3
+                        <br/>
+                        Region: East China 1<br/>
+                    </nz-descriptions-item>
+                </nz-descriptions>
+            </nz-tab>
+        </nz-tabset>
+    </tx-layout-content>
+    <tx-layout-footer>
+        JsonKit
+    </tx-layout-footer>
+</tx-layout>

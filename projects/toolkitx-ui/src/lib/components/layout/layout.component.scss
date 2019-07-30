@@ -1,0 +1,60 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+#content {
+    height: 100%;
+    overflow: auto;
+}
+
+#footer {
+    background: #FAFAFA;
+    height: 30px;
+    flex-shrink: 0;
+    line-height: 30px;
+    padding: 0 1rem;
+    border-top: #E8E8E8 solid 1px;
+    box-sizing: border-box;
+    font-size: 0.75rem;
+}
+
+#header {
+    box-shadow: #666 0 0 5px;
+    background: #1f2532;
+    position: relative;
+    z-index: 10;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: 54px;
+    flex-shrink: 0;
+}
+
+.product-name {
+    display: flex;
+    align-items: center;
+
+    .logo {
+        height: 18px;
+        margin-right: 0.8rem;
+        padding-right: 0.5rem;
+        border-right: 1px solid #444;
+    }
+
+    .name {
+        height: 16px;
+    }
+
+    .name-text {
+        font-size: 14px;
+        color: #FFF;
+        height: 18px;
+        display: flex;
+        align-items: center;
+    }
+}
