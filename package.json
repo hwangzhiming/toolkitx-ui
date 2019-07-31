@@ -1,9 +1,9 @@
 {
     "name": "toolkitx-ui-app",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve",
+        "start": "ng serve --port 8888",
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
@@ -11,7 +11,8 @@
         "lib:copy:assets": "cpx ./projects/toolkitx-ui/assets/**/* ./dist/toolkitx-ui/assets",
         "lib:copy:less": "cpx ./projects/toolkitx-ui/styles/**/* ./dist/toolkitx-ui/styles",
         "lib:build": "ng build toolkitx-ui && npm run lib:copy:assets && npm run lib:copy:less",
-        "prelib:publish": "npm run lib:build",
+        "prelib:publish": "npm run lib:update-version && npm run lib:build",
+        "lib:update-version": "cd ./projects/toolkitx-ui && npm version patch",
         "lib:publish": "npm publish ./dist/toolkitx-ui --access=public",
         "lib:showVersions": "npm show @toolkitx/ui@* version",
         "lib:showTags": "npm dist-tag ls @toolkitx/ui",
