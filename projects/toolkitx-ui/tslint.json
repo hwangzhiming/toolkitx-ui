@@ -10,7 +10,7 @@
     "component-selector": [
       true,
       "element",
-      "tui",
+      "tx",
       "kebab-case"
     ]
   }
