@@ -1,4 +1,4 @@
-<section class="tx-header" [class.light]="txTheme==='light'">
+<section class="tx-header" [class.light]="txTheme==='light'" style="-webkit-app-region: drag">
     <div class="product-name" style="-webkit-app-region: drag; -webkit-user-select: none;">
         <img class="logo" src="/assets/toolkitx/branding/x-blue.svg" alt="">
         <img *ngIf="txIcon && !txTitle" class="name" [src]="'/assets/logos/' + txIcon" alt="">
