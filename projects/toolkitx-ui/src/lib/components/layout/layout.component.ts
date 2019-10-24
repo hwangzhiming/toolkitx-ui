@@ -7,8 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
     exportAs: 'LayoutComponent'
 })
 export class LayoutComponent implements OnInit {
-    @Input() icon: string;
-    @Input() title: string;
+    @Input() txIcon: string;
+    @Input() txTitle: string;
+    @Input() txTheme: 'dark' | 'light' = 'dark';
     constructor() {
     }
 
